@@ -28,7 +28,7 @@ public class TrayApplicationContext : ApplicationContext
 
         _notifyIcon = new NotifyIcon
         {
-            Icon = SystemIcons.Application,
+            Icon = LoadAppIcon(),
             Text = "DisplayBoss - Display Profile Switcher",
             Visible = true,
             ContextMenuStrip = _contextMenu,
@@ -250,6 +250,13 @@ public class TrayApplicationContext : ApplicationContext
             _contextMenu.Dispose();
         }
         base.Dispose(disposing);
+    }
+
+    private static Icon LoadAppIcon()
+    {
+        var stream = typeof(TrayApplicationContext).Assembly
+            .GetManifestResourceStream("DisplayBoss.Tray.app.ico");
+        return stream != null ? new Icon(stream, 32, 32) : SystemIcons.Application;
     }
 
     private static bool IsStartupEnabled()

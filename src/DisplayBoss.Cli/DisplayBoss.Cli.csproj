@@ -5,6 +5,11 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <AssemblyName>displayboss-cli</AssemblyName>
+    <Product>DisplayBoss</Product>
+    <Description>DisplayBoss CLI - Display Profile Switcher</Description>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

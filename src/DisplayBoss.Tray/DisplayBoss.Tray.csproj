@@ -6,10 +6,19 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <AssemblyName>DisplayBoss</AssemblyName>
+    <Product>DisplayBoss</Product>
+    <Description>Display Profile Switcher</Description>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DisplayBoss.Core\DisplayBoss.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="app.ico" LogicalName="DisplayBoss.Tray.app.ico" />
   </ItemGroup>
 
 </Project>
